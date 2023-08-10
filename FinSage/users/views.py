@@ -3,7 +3,6 @@ from django.contrib import messages
 from django.shortcuts import get_object_or_404
 from .forms import UserRegisterForm,UserUpdateForm,ProfileUpdateForm
 from django.contrib.auth.decorators import login_required
-from ciphers.models import Ciphers
 
 def register(request):
     if request.method == 'POST':
@@ -17,19 +16,19 @@ def register(request):
         form = UserRegisterForm()
     return render(request, 'users/register.html',{'form' : form})
 
-@login_required
-def show_favourites(request):
-    favourite_ciphers = Ciphers.objects.all().filter(favourites=request.user)
-    return render(request,'users/favourite_ciphers_list.html',{'favourite_ciphers':favourite_ciphers})
+# @login_required
+# def show_favourites(request):
+#     favourite_ciphers = Ciphers.objects.all().filter(favourites=request.user)
+#     return render(request,'users/favourite_ciphers_list.html',{'favourite_ciphers':favourite_ciphers})
 
-@login_required
-def favourite_add(request,cipher_choice):
-    cipher = get_object_or_404(Ciphers,name=cipher_choice)
-    if cipher.favourites.filter(id=request.user.id).exists():
-        cipher.favourites.remove(request.user)
-    else:
-        cipher.favourites.add(request.user)
-    return HttpResponseRedirect(request.META['HTTP_REFERER'])
+# @login_required
+# def favourite_add(request,cipher_choice):
+#     cipher = get_object_or_404(Ciphers,name=cipher_choice)
+#     if cipher.favourites.filter(id=request.user.id).exists():
+#         cipher.favourites.remove(request.user)
+#     else:
+#         cipher.favourites.add(request.user)
+#     return HttpResponseRedirect(request.META['HTTP_REFERER'])
 
 
 

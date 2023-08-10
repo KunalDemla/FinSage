@@ -60,7 +60,7 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                       <a class="dropdown-item" href="{% url 'user_profile'%}">Profile</a>
-                      <!-- <a class="dropdown-item" href="{% url 'show_favourites'%}">Favourites</a> -->
+                      {% comment %} <!-- <a class="dropdown-item" href="{% url 'show_favourites'%}">Favourites</a> --> {% endcomment %}
                       <div class="dropdown-divider"></div>
                       <a class="dropdown-item" href="{% url 'user_logout'%}">Logout</a>
                     </div>
