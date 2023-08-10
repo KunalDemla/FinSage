@@ -34,6 +34,10 @@ def index(request):
 def modules(request,modules_choice):
     mapping = {
         "budgeting" : "budgeting.html",
+        "interest" : "interest.html",
+        "digitalPayments" : "digital_payment.html",
+        "financialGoals" : "financial_goals.html",
+        "needsVsWants" : "index.html",
     }
     return render(request,'modules/'+mapping[modules_choice],{'sidebar':False})
 
@@ -50,5 +54,17 @@ def favourite_add(request,modules_choice):
     return HttpResponseRedirect(request.META['HTTP_REFERER'])
 
 def recommendations(request):
-    return render(request,'modules/index.html',{'sidebar':True})
+    return render(request,'modules/recommendation.html',{'sidebar':True})
 
+def liked(request):
+    data = Modules.objects.all().values()
+    fav = []
+    for module in data:
+        mod = get_object_or_404(Modules,moduleId=module['moduleId'])
+        if mod.likes.filter(id=request.user.id).exists():
+            fav.append(module)
+    context = {
+        "sidebar" : True,
+        "modules" : fav,
+    }
+    return render(request,'modules/favourite_cipher_list.html',context)
