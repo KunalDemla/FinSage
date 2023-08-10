@@ -42,14 +42,14 @@
                 <div class="collapse navbar-collapse" id="navbarToggle">
                   <div class="navbar-nav mr-auto">
                     
-                    <a class="nav-item nav-link" href="{% url 'about_page' %}">Modules</a>
-                    <a class="nav-item nav-link" href="{% url 'about_page' %}">Recommendation</a>
+                    <a class="nav-item nav-link" href="{% url 'modules_page' %}">Modules</a>
+                    <a class="nav-item nav-link" href="{% url 'reco_page' %}">Recommendation</a>
                     <a class="nav-item nav-link" href="{% url 'about_page' %}">Elementry</a>
                     <a class="nav-item nav-link" href="{% url 'about_page' %}">About</a>
-                    <!-- {% if user.is_authenticated %}
+                    {% comment %} <!-- {% if user.is_authenticated %}
                     <a class="nav-item nav-link" href="#">PoTD</a>
                     <a class="nav-item nav-link" href="#">CoTM</a>
-                    {% endif %} -->
+                    {% endif %} --> {% endcomment %}
                     
                   </div>
                   <!-- Navbar Right Side -->
