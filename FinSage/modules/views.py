@@ -39,6 +39,12 @@ def modules(request,modules_choice):
         "digitalPayments" : "digital_payment.html",
         "financialGoals" : "financial_goals.html",
         "needsVsWants" : "index.html",
+        "mutualFunds" : "mutual_funds.html",
+        "stockMarket" : "stocks.html",
+        "retirementPlanning": "retirement.html",
+        "privateEquity":"equity.html",
+        "taxPlanning": "tax.html",
+        "cryptocurrency": "crypto.html"
     }
     return render(request,'modules/'+mapping[modules_choice],{'sidebar':False})
 
