@@ -1,11 +1,14 @@
 {%extends "home/base.html"%}
+{%load static%}
 {%block content%}
-    <img src="https://cdn.discordapp.com/attachments/836533604367597568/1039589275949351002/FullLogo.png" width="65%" class="img-fluid mx-auto d-block" alt="Logo">
+    <img src="{% static 'home/finlit.png' %}" width="50%" class="img-fluid mx-auto d-block" alt="FinLIT">
     <div class="mt-5">
         <p>
          <b> FinSage </b> is a digital tool designed to educate and empower individuals with the knowledge and skills necessary to make informed decisions about their personal finances.  Termed as financial literacy, we cover a wide range of topics related to money management, budgeting, saving, investing, debt management, retirement planning, and more. The goal of such applications is to improve people's financial well-being by providing accessible and actionable information. 
 
         </p>
+
+        <img src="{% static 'home/main_logo_png.png' %}" width="40%" class="img-fluid mx-auto d-block" alt="Logo">
         <p>
           Above this, FinSage aims to bring the world of digital currency and its knowledge closer to the people of every community. Enabled by video lectures from financial experts, our customers are able to understand the world of finances. The platform also acts as an edtech means for people to earn knowledge and certifications. We recommend users with topics based on their literacy domain and aim to empower the minorities as we connect them to financial advisors and enable a few free sessions.
 
@@ -80,9 +83,9 @@
                 <h6 class="text-uppercase fw-bold mb-4">
                   Products
                 </h6>
-                {% comment %} <p>
-                  <a href="{% url 'cipher_list'%}" class="text-reset">Elementry</a>
-                </p> {% endcomment %}
+                <p>
+                  <a href="#" class="text-reset">Elementry</a>
+                </p>
                 <p>
                   <a href="#!" class="text-reset">Modules</a>
                 </p>
@@ -120,10 +123,10 @@
                 <p><i class="fas fa-home me-3"></i> Thapar Institute of Engineering and Technology</p>
                 <p>
                   <i class="fas fa-envelope me-3"></i>
-                  finsage.reset@gmail.com
+                  connect.finsage@gmail.com
                 </p>
-                <p><i class="fas fa-phone me-3"></i> + 98141 42270</p>
-                <p><i class="fas fa-phone me-3"></i> + 80549 76689</p>
+                <p><i class="fas fa-phone me-3"></i> +91 98141 42270</p>
+                <p><i class="fas fa-phone me-3"></i> +91 80549 76689</p>
               </div>
               <!-- Grid column -->
             </div>

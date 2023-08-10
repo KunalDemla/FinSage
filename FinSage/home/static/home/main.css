@@ -8,13 +8,15 @@
   src: url(https://cdn.discordapp.com/attachments/841730659605282836/1035516892368076860/himagsikan.ttf)
 }
 
+
 body {
     background: #C5DFF8 !important;
     border-color:  #000000 !important;
     color: #4A55A2;
     margin-top: 5rem;
-    font-family: 'NanumMyeongjo';
+    font-family: 'Roboto';
     font-style: normal;
+    /* font-weight: bold; */
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -118,17 +120,17 @@ body {
   }
 
   a:link {
-    color: rgb(147, 76, 213);
+    color: #4A55A2;
   }
   
   /* visited link */
   a:visited {
-    color: rgb(147, 76, 213);
+    color: blue;
   }
   
   /* mouse over link */
   a:hover {
-    color: rgb(62, 193, 50);
+    color: #293589;
   }
   
   /* selected link */
