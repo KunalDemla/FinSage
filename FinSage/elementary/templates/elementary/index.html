@@ -1,9 +1,51 @@
+
 {%extends "home/base.html"%}
 {%load static%}
 {%block content%}
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+
+.card-title{
+    font-family: Roboto ;
+    font-size: 20px;
+    color: #4A55A2 !important;  
+    font-weight: bold;
+}
+
+.card-text{
+    font-family: Arial;
+    color: #7895CB;
+}
+
+</style>
 
 
 
+<div class="row">
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">How to withdraw money from an ATM?</h5>
+          <p class="card-text">A step-by-step guide on how to withdraw money from your nearest bank account!</p>
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/HX_qzGk7FaU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Special title treatment</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
-{%endblock content%}
+  {%endblock content%}

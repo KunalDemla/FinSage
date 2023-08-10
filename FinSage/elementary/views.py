@@ -5,4 +5,4 @@ def index(request):
         'sidebar': True
     }
     
-    return render(request,'modules/index.html',context)
+    return render(request,'elementary/index.html',context)
