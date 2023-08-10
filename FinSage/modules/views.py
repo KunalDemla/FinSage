@@ -6,6 +6,11 @@ from django.contrib.auth.decorators import login_required
 def index(request):
     data = Modules.objects.all().values()
     fav = {}
+    mapping = {
+        0 : "Basic",
+        1 : "Intermediate",
+        2 : "Advanced",
+    }
     for module in data:
         mod = get_object_or_404(Modules,moduleId=module['moduleId'])
         if mod.likes.filter(id=request.user.id).exists():
@@ -13,6 +18,7 @@ def index(request):
         else:
             module['fav'] = True
             # fav[module['moduleId']] = True
+        module['difficulty'] = mapping[module['difficulty']]
             
     context = {
         #'form': forms[cipher_choice](),
