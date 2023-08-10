@@ -1,6 +1,7 @@
 from django.shortcuts import render,redirect,HttpResponseRedirect
 from django.shortcuts import get_object_or_404
 from .models import Modules
+from django.contrib.auth.decorators import login_required
 
 def index(request):
     data = Modules.objects.all().values()
@@ -56,6 +57,7 @@ def favourite_add(request,modules_choice):
 def recommendations(request):
     return render(request,'modules/recommendation.html',{'sidebar':True})
 
+@login_required
 def liked(request):
     data = Modules.objects.all().values()
     fav = []
