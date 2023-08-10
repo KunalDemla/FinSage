@@ -9,7 +9,7 @@ urlpatterns = [
     path('',views.index , name='modules_page'),
     path('module/<str:modules_choice>', views.modules, name='modules'),
     path('recommendations/', views.recommendations, name='reco_page')
-    
+
 ]
 if(settings.DEBUG):
     urlpatterns+=static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
