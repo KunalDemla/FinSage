@@ -21,4 +21,5 @@ urlpatterns = [
     path('users/', include('users.urls')),
     path('',include('home.urls')),
     path('modules/',include('modules.urls')),
+    path('elementary/',include('elementary.urls')),
 ]

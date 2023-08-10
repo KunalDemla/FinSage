@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'home.apps.HomeConfig',
     'crispy_forms',
     'modules.apps.ModulesConfig',
+    'elementary.apps.ElementaryConfig',
     'crispy_bootstrap4',
     'django.contrib.admin',
     'django.contrib.auth',
