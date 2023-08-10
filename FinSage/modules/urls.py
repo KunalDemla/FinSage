@@ -7,6 +7,8 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('',views.index , name='modules_page'),
+    path('module/<str:modules_choice>', views.modules, name='modules'),
+    path('recommendations/', views.recommendations, name='reco_page')
     
 ]
 if(settings.DEBUG):
