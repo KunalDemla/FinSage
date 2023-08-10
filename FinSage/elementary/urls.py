@@ -7,7 +7,6 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('',views.index , name='elem_page'),
-    path('module/<str:modules_choice>', views.modules, name='elem_modules'),
 ]
 if(settings.DEBUG):
     urlpatterns+=static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
