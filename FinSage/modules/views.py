@@ -67,4 +67,4 @@ def liked(request):
         "sidebar" : True,
         "modules" : fav,
     }
-    return render(request,'modules/favourite_cipher_list.html',context)
+    return render(request,'modules/favourite_ciphers_list.html',context)
