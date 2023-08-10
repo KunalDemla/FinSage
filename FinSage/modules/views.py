@@ -5,13 +5,13 @@ def index(request):
     data = Modules.objects.all().values()
     context = {
         #'form': forms[cipher_choice](),
-        'data': data
-        
+        'modules': data,
+        'sidebar': True
     }
     
 
     #print(data)
-    return render(request,'modules/index.html',{'sidebar':True})
+    return render(request,'modules/index.html',context)
 
 def modules(request):
     return render(request,'modules/index.html',{'sidebar':True})
