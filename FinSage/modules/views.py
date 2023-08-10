@@ -13,8 +13,11 @@ def index(request):
     #print(data)
     return render(request,'modules/index.html',context)
 
-def modules(request):
-    return render(request,'modules/index.html',{'sidebar':True})
+def modules(request,modules_choice):
+    mapping = {
+        "budgeting" : "budgeting.html",
+    }
+    return render(request,'modules/'+mapping[modules_choice],{'sidebar':False})
 
 def recommendations(request):
     return render(request,'modules/index.html',{'sidebar':True})
