@@ -1,0 +1,29 @@
+{%extends "home/base.html"%}
+{% load crispy_forms_tags %}
+    {%block redir%}
+        {% if user.is_authenticated %}
+        <meta http-equiv = "refresh" content = "0; url = {% url 'user_profile'%}" />
+        {%endif%}
+    {%endblock redir%}
+{%block content%}
+    <div class="content-section">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom bodcol mb-4">
+                    Log In!
+                </legend>
+                {{form|crispy}}
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-success" type="submit">Login</button>
+                <small class="text-muted ml-2">
+                    <a href="{%url 'password_reset'%}">Forgot password?</a>
+                </small>
+            </div>
+        </form>
+        <div class="border-top bodcol pt-3">
+            <small class="text-muted">Don't have an account? <a href="{%url 'user_register'%}" class="ml-2">Signup</a> </small>
+        </div>
+    </div>
+{%endblock content%}

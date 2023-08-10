@@ -1,3 +1,15 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+def index(request):
+    return render(request,'home/index.html',{'sidebar':True})
+
+
+def about(request):
+    return render(request,'home/about.html')
+
+def faqs(request):
+    return render(request,'home/faqs.html')
+
+def feedback(request):
+    return render(request,'home/feedback.html')
