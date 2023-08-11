@@ -65,7 +65,8 @@
     </div>
     <div class="pt-5 mt-5 border-top bodcol">
         
-{% if recommendations %}
+{% if recommendations and if recommendations|length > 0 %}
+<h2>Recommendations for you!</h2>
 {% for module in recommendations %}
 {% if forloop.counter0|divisibleby:3 %}
 {% if forloop.first %}
