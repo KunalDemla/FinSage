@@ -1,0 +1,114 @@
+{%extends "home/base.html"%}
+{%load static%}
+{%block content%}
+
+
+<style>
+    .card-group{
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+
+    .card{
+        margin-top: 5px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 20px;
+
+    }
+
+    .card-title{
+      font-weight: bold;
+      color: #4A55A2;
+
+    }
+
+    .card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+    }
+
+    .card-dif{
+      /* background-color: #C5C5C5; */
+      color: #7895CB;
+      margin-bottom: 5px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-right: 5px;
+      padding-left: 5px;
+      font-weight: bold;
+      display: inline;
+
+
+    }
+
+    .card-text{
+        margin-bottom: 5px;
+    }
+
+</style>
+
+
+
+<div class="card-group">
+
+    <div class="card">
+      <img class="card-img-top" src="{% static 'modules/lumpsum.jpg' %}"" alt="Card image cap">
+      <div class="card-body">
+        <a href = "https://groww.in/calculators/lumpsum-calculator"><h5 class="card-title">LumpSum Calculator</h5></a>
+        <p class="card-dif">To find out the estimated returns on your lumpsum mutual fund investment, 
+            you may use a mutual fund lumpsum calculator available online.</p>
+        
+      </div>
+    </div>
+
+    <div class="card">
+        <img class="card-img-top" src="{% static 'modules/sip.jpg' %}"" alt="Card image cap">
+        <div class="card-body">
+          <a href = "https://groww.in/calculators/sip-calculator"><h5 class="card-title">SIP Calculator</h5></a>
+          <p class="card-dif">A SIP calculator is a simple tool that allows individuals to get an idea of the returns 
+            on their mutual fund investments made through SIP.</p>
+          
+        </div>
+      </div>
+
+
+      <div class="card">
+        <img class="card-img-top" src="{% static 'modules/retire.jpg' %}"" alt="Card image cap">
+        <div class="card-body">
+          <a href = "https://groww.in/calculators/retirement-calculator"><h5 class="card-title">Retirement Calculator</h5></a>
+          <p class="card-dif">Retirement calculator helps you calculate how much you need to save each month to retire with a large sum at the end of one’s professional career.</p>
+          
+        </div>
+      </div>
+
+</div>
+
+
+
+<div class="card-group">
+
+    <div class="card">
+      <img class="card-img-top" src="{% static 'modules/tax.jpg' %}"" alt="Card image cap">
+      <div class="card-body">
+        <a href = "https://groww.in/calculators/income-tax-calculator"><h5 class="card-title">Income Tax Calculator</h5></a>
+        <p class="card-dif">An Income-tax calculator is an online tool that helps to evaluate taxes based on a person's income once the Union Budget for the year is announced. </p>
+        
+      </div>
+    </div>
+
+    <div class="card">
+        <img class="card-img-top" src="{% static 'modules/ci.jpg' %}"" alt="Card image cap">
+        <div class="card-body">
+          <a href = "https://groww.in/calculators/compound-interest-calculator"><h5 class="card-title">Compound Interest Calculator</h5></a>
+          <p class="card-dif">One needs a reliable compound interest calculator to ensure they are receiving the right interest on their amount.</p>
+          
+        </div>
+      </div>
+
+
+
+</div>
+
+{%endblock content%}
