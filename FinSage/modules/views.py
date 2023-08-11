@@ -83,6 +83,11 @@ def liked(request):
 
 
 def recommendations(request):
+    mapping = {
+        0 : "Basic",
+        1 : "Intermediate",
+        2 : "Advanced",
+    }
     score = [0,0,0,0,0,0,0,0,0]
     recommendations = []
     data = Modules.objects.all().values()
@@ -96,6 +101,12 @@ def recommendations(request):
                 if score[i] <= 1:
                     recommendations.append(module)
                 i+=1
+                mod = get_object_or_404(Modules,moduleId=module['moduleId'])
+                if mod.likes.filter(id=request.user.id).exists():
+                    module['fav'] = False
+                else:
+                    module['fav'] = True
+                module['difficulty'] = mapping[module['difficulty']]
 
     context = {
         'sidebar':True,
