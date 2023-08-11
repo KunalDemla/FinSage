@@ -106,8 +106,9 @@ body {
   }
 
   .cipher-heading{
-    background-image: url(https://cdn.discordapp.com/attachments/841730659605282836/1035492899216953354/Heading_bg_new.png);
-    background-repeat: repeat;
+    /* background-image: url(https://cdn.discordapp.com/attachments/841730659605282836/1035492899216953354/Heading_bg_new.png); */
+    /* background-repeat: repeat; */
+    color:#4A55A2;
     -webkit-background-clip: text;
     background-clip: text ;
     -webkit-text-fill-color: transparent;
