@@ -2,6 +2,7 @@ from django.shortcuts import render,redirect,HttpResponseRedirect
 from django.shortcuts import get_object_or_404
 from .models import Modules
 from django.contrib.auth.decorators import login_required
+from forms import QuestionsForm
 
 def index(request):
     data = Modules.objects.all().values()
@@ -66,9 +67,6 @@ def favourite_add(request,modules_choice):
         module.save()
     return HttpResponseRedirect(request.META['HTTP_REFERER'])
 
-def recommendations(request):
-    return render(request,'modules/recommendation.html',{'sidebar':True})
-
 @login_required
 def liked(request):
     data = Modules.objects.all().values()
@@ -82,3 +80,26 @@ def liked(request):
         "modules" : fav,
     }
     return render(request,'modules/favourite_ciphers_list.html',context)
+
+
+def recommendations(request):
+    score = [0,0,0,0,0,0,0,0,0]
+    recommendations = []
+    data = Modules.objects.all().values()
+    if request.method == 'POST':
+        form = QuestionsForm(request.POST)
+        if form.is_valid():
+            for i in range(27):
+                score[(int)(i/3)] += int(form.cleaned_data[f'q{i}'])
+            i = 0 
+            for module in data:
+                if score[i] <= 1:
+                    recommendations.append(module)
+                i+=1
+
+    context = {
+        'sidebar':True,
+        'form' : QuestionsForm(),
+        'recommendations' : recommendations,
+    }
+    return render(request,'modules/recommendation.html',context)
