@@ -114,3 +114,9 @@ def recommendations(request):
         'recommendations' : recommendations,
     }
     return render(request,'modules/recommendation.html',context)
+
+def calculators(request):
+    context = {
+        'sidebar':True
+    }
+    return render(request,'modules/calculators.html',context)

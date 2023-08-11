@@ -11,6 +11,7 @@ urlpatterns = [
     path('fav/<str:modules_choice>/',views.favourite_add,name='favourite_add'),
     path('recommendations/', views.recommendations, name='reco_page'),
     path('liked/', views.liked, name='liked_page'),
+    path('calculators/', views.calculators, name='calc_page'),
 
 ]
 if(settings.DEBUG):
