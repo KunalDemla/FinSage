@@ -2,7 +2,7 @@ from django.shortcuts import render,redirect,HttpResponseRedirect
 from django.shortcuts import get_object_or_404
 from .models import Modules
 from django.contrib.auth.decorators import login_required
-from forms import QuestionsForm
+from .forms import QuestionsForm
 
 def index(request):
     data = Modules.objects.all().values()
