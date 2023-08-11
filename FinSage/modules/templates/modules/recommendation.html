@@ -46,25 +46,7 @@
 
 </style>
 
-    <div class="content-section">
-        <form  method="POST">
-            {% csrf_token %}
-            <fieldset class="form-group">
-                <legend class="border-bottom mb-4 bodcol cipher-heading">
-                    Recommendation Test
-                </legend>
-                {{ form|crispy }}
-                <br>
-            </fieldset>
-            <div class="form-group">
-                <button class="btn btn-outline-info" type="submit">
-                  Submit
-                </button>
-            </div>
-        </form>
-    </div>
-    <div class="pt-5 mt-5 border-top bodcol">
-        
+
 {% if recommendations and recommendations|length > 0 %}
 <h2>Recommendations for you!</h2>
 {% for module in recommendations %}
@@ -107,5 +89,28 @@
 {% endfor %}
 </div>
 {% endif %}
+
+<div class="pt-5 mt-5 border-top bodcol">
+
+    <div class="content-section">
+        <form  method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4 bodcol cipher-heading">
+                    Recommendation Test
+                </legend>
+                {{ form|crispy }}
+                <br>
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">
+                  Submit
+                </button>
+            </div>
+        </form>
+    </div>
+    
+        
+
     </div>
 {% endblock %}
