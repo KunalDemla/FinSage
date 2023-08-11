@@ -2,6 +2,10 @@
 {% load crispy_forms_tags %}
 {%block content %}
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
 <style>
     .card-group{
         margin-top: 10px;
@@ -44,11 +48,31 @@
         margin-bottom: 5px;
     }
 
+    .heading{
+      font-family: "Roboto";
+      color: #4A55A2 !important ; 
+      font-weight: bold;
+      display: inline;
+    }
+
+  
+
+    .test-head{
+      background-color: #C5C5C5;
+      font-family: "Roboto";
+      color: #4A55A2 !important ; 
+      font-weight: bold;
+      position: absolute;
+      right: 25px;
+    }
+
 </style>
 
 
 {% if recommendations and recommendations|length > 0 %}
-<h2>Recommendations for you!</h2>
+<h2 class="heading">Recommendations </h2> 
+
+<a class="test-head" href="#test"> <h5 class="heading">Take test to update recommendations!</h5> </a>
 {% for module in recommendations %}
 {% if forloop.counter0|divisibleby:3 %}
 {% if forloop.first %}
@@ -90,7 +114,7 @@
 </div>
 {% endif %}
 
-<div class="pt-5 mt-5 border-top bodcol">
+<div id="test" class="pt-5 mt-5 border-top bodcol">
 
     <div class="content-section">
         <form  method="POST">
