@@ -12,6 +12,7 @@ urlpatterns = [
     path('recommendations/', views.recommendations, name='reco_page'),
     path('liked/', views.liked, name='liked_page'),
     path('calculators/', views.calculators, name='calc_page'),
+    path('certi/', views.certi, name='certi_page'),
 
 ]
 if(settings.DEBUG):

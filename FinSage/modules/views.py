@@ -7,6 +7,7 @@ from .forms import QuestionsForm
 def index(request):
     data = Modules.objects.all().values()
     fav = {}
+    form  = QuestionsForm()
     mapping = {
         0 : "Basic",
         1 : "Intermediate",
@@ -25,13 +26,11 @@ def index(request):
         #'form': forms[cipher_choice](),
         'modules': data,
         'sidebar': True,
+        'form' : form,
         # 'fav': fav
         # 'fav': True
     }
     
-    # cipher = get_object_or_404(Ciphers,name=cipher_choice)
-    # if cipher.favourites.filter(id=request.user.id).exists():
-    #     context['fav'] = False
     
         
     
@@ -81,7 +80,7 @@ def liked(request):
     }
     return render(request,'modules/favourite_ciphers_list.html',context)
 
-
+@login_required
 def recommendations(request):
     mapping = {
         0 : "Basic",
@@ -120,3 +119,21 @@ def calculators(request):
         'sidebar':True
     }
     return render(request,'modules/calculators.html',context)
+
+@login_required
+def certi(request):
+    if request.method == 'POST':
+        form = QuestionsForm(request.POST)
+        score =0
+        cleared = False
+        sidebar = False
+        if form.is_valid():
+            for i in range(27):
+                score+= int(form.cleaned_data[f'q{i}'])
+            if score >= 20:
+                cleared = True
+                sidebar = True
+        context = {'sidebar':sidebar,'cleared':cleared,'user':request.user}
+        return render(request,'modules/certi.html',context)
+    context = {'sidebar':False,'user':request.user,'type':'get','form':QuestionsForm()}
+    return render(request,'modules/certi.html',context)

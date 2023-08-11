@@ -1,0 +1,33 @@
+{% extends 'home/base.html' %}
+{% load crispy_forms_tags %}
+{%block content %}
+
+{% if type %}
+<div id="test" class="pt-5 mt-5 border-top bodcol">
+
+    <div class="content-section">
+        <form  method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4 bodcol cipher-heading">
+                    Certification Test
+                </legend>
+                {{ form|crispy }}
+                <br>
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">
+                  Submit
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+{% else %}
+{% if cleared %}
+<h1>Congratulations, {{user.username}} has cleared the test!</h1>
+{% else %}
+<h1>You have failed the test, please try again</h1>
+{% endif %}
+{% endif %}
+{% endblock %}
