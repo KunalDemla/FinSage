@@ -48,47 +48,47 @@ class QuestionsForm(forms.Form):
         )
     )
     q5 = forms.ChoiceField(
-        label='Category',
+        label='Q6 Which type of digital payment involves scanning a Quick Response (QR) code to initiate a transaction?',
         choices=(
-            ('0', "Gen"),
-            ('1', "ST"),
-            ('0', "To track daily expenses"),
+            ('0', "Online banking"),
+            ('0', "Mobile banking"),
+            ('1', "Contactless payment"),
             ('0', "I don't know :("),
         )
     )
     q6 = forms.ChoiceField(
-        label='Category',
+        label='Q7 What is the primary purpose of setting financial goals?',
         choices=(
-            ('0', "Gen"),
-            ('1', "ST"),
-            ('0', "To track daily expenses"),
+            ('1', "To have a clear direction for managing finances"),
+            ('0', "To compare with others' goals"),
+            ('0', "To predict future economic trends"),
             ('0', "I don't know :("),
         )
     )
     q7 = forms.ChoiceField(
-        label='Category',
+        label='Q8. Which of the following is a characteristic of a well-defined financial goal?',
         choices=(
-            ('0', "Gen"),
-            ('1', "ST"),
-            ('0', "To track daily expenses"),
+            ('0', "Unrealistic and unattainable target"),
+            ('1', "Specific, measurable, and time-bound"),
+            ('0', "Ignoring current financial situation"),
             ('0', "I don't know :("),
         )
     )
     q8 = forms.ChoiceField(
-        label='Category',
+        label='Q9 What is an "emergency fund" in the context of financial goal setting?',
         choices=(
-            ('0', "Gen"),
-            ('1', "ST"),
-            ('0', "To track daily expenses"),
+            ('1', "Reserve funds for unexpected expenses"),
+            ('0', "Money set aside for vacation expenses"),
+            ('0', "Savings earmarked for retirement"),
             ('0', "I don't know :("),
         )
     )
     q9 = forms.ChoiceField(
-        label='Category',
+        label='Q10 What is a mutual fund?',
         choices=(
-            ('0', "Gen"),
-            ('1', "ST"),
-            ('0', "To track daily expenses"),
+            ('0', "A type of bank account"),
+            ('1', "A pool of funds from multiple investors to invest in various securities"),
+            ('0', "A government savings bond"),
             ('0', "I don't know :("),
         )
     )
