@@ -92,3 +92,77 @@ class QuestionsForm(forms.Form):
             ('0', "I don't know :("),
         )
     )
+    q10 = forms.ChoiceField(
+        label='Q11 How are mutual fund returns generated?',
+        choices=(
+            ('0', "By offering fixed interest rates"),
+            ('1', "Through a combination of capital gains, dividends, and interest earned by the fund"),
+            ('0', "Through speculation on individual stocks"),
+            ('0', "I don't know :("),
+        )
+    )
+    q11 = forms.ChoiceField(
+        label='Q12 What is a "net asset value" (NAV) of a mutual fund?',
+        choices=(
+            ('0', "The fund manager's salary"),
+            ('0', "Through a combination of capital gains, dividends, and interest earned by the fund"),
+            ('1', "The number of investors in the fund"),
+            ('0', "I don't know :("),
+        )
+    )
+    q12 = forms.ChoiceField(
+        label='Q13 What does the term "stock" represent in the stock market?',
+        choices=(
+            ('0', "A type of bond issued by a corporation"),
+            ('0', "Physical assets owned by investors"),
+            ('0', "I dont know"),
+            ('1', "Ownership interest in a company"),
+        )
+    )
+    q13 = forms.ChoiceField(
+        label='Q14 What is the primary function of a stock exchange?',
+        choices=(
+            ('1', "Facilitating trading of stocks and other securities"),
+            ('0', "Providing loans to businesses"),
+            ('0', "I dont know"),
+            ('0', "Offering insurance services"),
+        )
+    )
+    q14 = forms.ChoiceField(
+        label='Q15 What is the significance of a stocks "ticker symbol"?',
+        choices=(
+            ('0', "It indicates the stock's face value"),
+            ('1', " It uniquely identifies a specific stock for trading purposes"),
+            ('0', "I dont know"),
+            ('0', "It represents the stock's historical performance"),
+        )
+    )
+    q15 = forms.ChoiceField(
+        label='Q16 What is the purpose of retirement planning?',
+        choices=(
+            ('0', "To spend all savings before retirement"),
+            ('1', " To ensure a steady income during retirement years"),
+            ('0', "I dont know"),
+            ('0', "To avoid financial planning altogether"),
+        )
+    )
+    q16 = forms.ChoiceField(
+        label='Q17 What is a 401(k) plan?',
+        choices=(
+            ('1', "A retirement savings plan offered by employers"),
+            ('0', " A form of real estate investment"),
+            ('0', "I dont know"),
+            ('0', "A type of credit card for retirees"),
+        )
+    )
+    q17 = forms.ChoiceField(
+        label='Q18 What is the "retirement age" in most Western countries?',
+        choices=(
+            ('0', "I dont know"),
+            ('0', " 50"),
+            ('0', "55"),
+            ('1', "65"),
+        )
+    )
+
+    
