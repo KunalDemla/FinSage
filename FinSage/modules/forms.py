@@ -164,5 +164,94 @@ class QuestionsForm(forms.Form):
             ('1', "65"),
         )
     )
+    q18 = forms.ChoiceField(
+        label='Q19 What is private equity?',
+        choices=(
+            ('0', "I dont know"),
+            ('0', "Capital invested in non-profit organizations"),
+            ('0', "Investments made in publicly traded companies"),
+            ('1', "Funds invested directly into private companies"),
+        )
+    )
+
+    q19 = forms.ChoiceField(
+        label='Q20 How do private equity firms typically generate returns on their investments?',
+        choices=(
+            ('0', "I dont know"),
+            ('1', "By acquiring and improving companies for eventual sale"),
+            ('0', "By providing loans to small businesses"),
+            ('0', "By investing exclusively in government bonds"),
+        )
+    )
+
+    q20 = forms.ChoiceField(
+        label='Q21 What is a common characteristic of private equity investments?',
+        choices=(
+            ('0', "I dont know"),
+            ('0', "High liquidity and easy access to funds"),
+            ('1', "Longer investment horizons with limited immediate liquidity"),
+            ('0', "Minimal risk and guaranteed returns"),
+        )
+    )
+
+    q21 = forms.ChoiceField(
+        label='Q22 What is the main objective of tax planning?',
+        choices=(
+            ('0', "I dont know"),
+            ('0', "To completely eliminate all taxes"),
+            ('0', "To ensure the highest possible tax burden"),
+            ('1', "To legally minimize tax liability"),
+        )
+    )
+
+    q22 = forms.ChoiceField(
+        label='Q23 What does a tax deduction do for your taxable income?',
+        choices=(
+            ('0', "I dont know"),
+            ('0', "Increases it"),
+            ('1', "Decreases it"),
+            ('0', "Has no effect"),
+        )
+    )
+
+    q23 = forms.ChoiceField(
+        label='Q24 What does a tax deduction do for your taxable income?',
+        choices=(
+            ('0', "I dont know"),
+            ('0', "An amount added to your taxable income"),
+            ('1', "A dollar-for-dollar reduction of your tax liability"),
+            ('0', "A deduction that reduces your gross income"),
+        )
+    )
+
+    q24 = forms.ChoiceField(
+        label='Q25 What is cryptocurrency?',
+        choices=(
+            ('0', "I dont know"),
+            ('1', "Digital or virtual currency that uses cryptography for security"),
+            ('0', "A type of stock in technology companies"),
+            ('0', "Physical coins made of precious metals"),
+        )
+    )
+
+    q25 = forms.ChoiceField(
+        label='Q26 What is cryptocurrency?',
+        choices=(
+            ('0', "I dont know"),
+            ('1', "By a decentralized network of computers using consensus algorithms"),
+            ('0', "By physical checks and signatures"),
+            ('0', "Through traditional banking methods"),
+        )
+    )
+
+    q26 = forms.ChoiceField(
+        label='Q27 Which cryptocurrency is often referred to as "digital gold" due to its scarcity and store of value characteristics?',
+        choices=(
+            ('0', "I dont know"),
+            ('0', "Ripple (XRP)"),
+            ('0', "Ethereum (ETH)"),
+            ('1', "Bitcoin (BTC)"),
+        )
+    )
 
     
